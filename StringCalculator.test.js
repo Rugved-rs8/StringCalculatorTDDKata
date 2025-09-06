@@ -7,4 +7,10 @@ describe('Testing add method', () => {
     test('single number returns the number itself', () => {
         expect(add("5")).toBe(5);
     });
+    test('two numbers', () => {
+        expect(add("10,3")).toBe(13);
+    });
+    test('multiple numbers', () => {
+        expect(add("1,2,3,4,5")).toBe(15);
+    });
  });
