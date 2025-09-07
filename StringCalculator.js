@@ -12,6 +12,13 @@ function add(numbers){
     }
     if(arr.length == 1) return Number(numbers);
     var ans = 0;
+    var negatives = [];
+    for(let i=0;i<arr.length;i++){
+        if(Number(arr[i]) < 0) negatives.push(arr[i]);
+    }
+    if(negatives.length > 0){
+        throw new Error("Negatives not allowed: " + negatives.join(","));
+    }
     for(let i=0;i<arr.length;i++){
         ans += Number(arr[i]);
     }

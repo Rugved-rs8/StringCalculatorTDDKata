@@ -19,4 +19,8 @@ describe('Testing add method', () => {
     test('custom delimiter', () => {
         expect(add("//;\n1;2")).toBe(3);
     });
+    test("handle negative numbers", () => {
+  expect(() => add("1,-9,2,-4,3,-6")).toThrow("Negatives not allowed: -9,-4,-6");
+});
+
  });
